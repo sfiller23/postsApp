@@ -1,0 +1,37 @@
+<section class="row">
+  <ul>
+    <li>Email: {{user.email}}</li>
+    <li>
+      <details>
+        <summary>Address</summary>
+        <ul *ngIf="user.address">
+          <li>Street: {{user.address.street}}</li>
+          <li>Suite: {{user.address.suite}}</li>
+          <li>city: {{user.address.city}}</li>
+          <li>zipcode: {{user.address.zipcode}}</li>
+          <li>
+            <details>
+              <summary>Geo</summary>
+              <ul>
+                <li>Lat: {{user.address.geo.lat}}</li>
+                <li>Lng: {{user.address.geo.lng}}</li>
+              </ul>
+            </details>
+        </li>
+        </ul>
+      </details>
+    </li>
+    <li>Phone: {{user.phone}}</li>
+    <li>Website: {{user.website}}</li>
+    <li>
+      <details>
+        <summary>Company</summary>
+        <ul *ngIf="user.company">
+          <li>Name: {{user.company.name}}</li>
+          <li>CatchPhrase: {{user.company.catchPhrase}}</li>
+          <li>Bs: {{user.company.bs}}</li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</section>

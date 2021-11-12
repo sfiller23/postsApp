@@ -1,0 +1,13 @@
+<div
+      [ngStyle]="{'background-color':user.numberOfposts < 10 ? 'grey' : 'white' }"
+      class="row users"
+      *ngFor="let user of usersService.users$ | async">
+  <a type="button" class="btn btn-outline-primary" routerLink="user/{{user.id}}/posts">
+    <h4>{{user.name}}</h4>
+    <ul>
+      <li>UserName: {{user.username}}</li>
+      <li>Email: {{user.email}}</li>
+      <li>Website: {{user.website}}</li>
+    </ul>
+  </a>
+</div>

@@ -1,0 +1,20 @@
+
+.users {
+  ul{
+    float: left;
+    text-align: left;
+  }
+
+  border: 1px solid blue;
+  border-radius: 1rem;
+  margin: 2%;
+
+  :hover{
+    background-color: rgb(133, 155, 201);
+    border-radius: 1rem;
+  }
+}
+
+
+
+

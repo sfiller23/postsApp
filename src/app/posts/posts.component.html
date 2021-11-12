@@ -1,0 +1,9 @@
+
+<section>
+  <app-search></app-search>
+  <div class="row posts" *ngFor="let post of postsService.posts$ | async">
+    <h4>{{post.title}}</h4>
+    <p>{{post.body}}</p>
+    <button (click)="onDelete(post.id)" type="button" class="btn btn-outline-danger">Delete</button>
+  </div>
+</section>
