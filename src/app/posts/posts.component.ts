@@ -1,8 +1,6 @@
-import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Observable, Subscription } from 'rxjs';
-import { Post } from '../interfaces/post.interface';
+import { Subscription } from 'rxjs';
 import { PostsService } from '../services/posts.service';
 import { UserDetailsService } from '../services/user-details.service';
 import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';

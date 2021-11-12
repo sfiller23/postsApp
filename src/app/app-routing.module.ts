@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserResolver } from './resolvers/user.resolver';
 import { UserComponent } from './user/user.component';
-import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {path: 'user/:id', component: UserComponent,

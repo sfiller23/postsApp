@@ -1,7 +1,4 @@
-import { AfterContentInit, AfterViewChecked, ChangeDetectionStrategy, ChangeDetectorRef, Component, DoCheck, OnInit } from '@angular/core';
-import { first } from 'rxjs/operators';
-import { PostsService } from './services/posts.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { PageService } from './services/page.service';
 
 @Component({
@@ -17,9 +14,6 @@ export class AppComponent implements OnInit {
   constructor(private pageService: PageService) {
 
   }
-
-
-
 
   ngOnInit(): void{
     this.pageService.page$.subscribe(page=>{

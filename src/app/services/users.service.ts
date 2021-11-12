@@ -1,10 +1,9 @@
-import { PostsService } from './posts.service';
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../interfaces/user.interface';
 import { BehaviorSubject, Observable, of, pipe } from 'rxjs';
-import { first, last, map, tap } from 'rxjs/operators';
+import { first, tap } from 'rxjs/operators';
 import { Post } from '../interfaces/post.interface';
 
 @Injectable({

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { PostsService } from '../../services/posts.service';
@@ -41,13 +41,10 @@ export class SearchComponent implements OnInit, OnDestroy {
 
     this.searchSubscription = this.searchTerms.pipe(
 
-      // wait 300ms after each keystroke before considering the term
       debounceTime(300),
 
-      // ignore new term if same as previous term
       distinctUntilChanged(),
 
-      // switch to new search observable each time the term changes
       switchMap((term: string) => this.postsService.searchPosts(term, this.currentUser.id)),
     ).subscribe(posts=>{
       this.postsService.setPosts(posts);

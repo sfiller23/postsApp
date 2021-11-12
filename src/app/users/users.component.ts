@@ -1,7 +1,5 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Observable } from 'rxjs';
-import { distinct, distinctUntilChanged, first, last, take } from 'rxjs/operators';
-import { User } from '../interfaces/user.interface';
+import { Component,OnInit} from '@angular/core';
+import { distinct,take } from 'rxjs/operators';
 import { UsersService } from '../services/users.service';
 
 @Component({

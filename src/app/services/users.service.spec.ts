@@ -1,11 +1,10 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { fakeAsync, flush, flushMicrotasks, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { HttpClient } from '@angular/common/http';
 import { UsersService } from './users.service';
-import { Data } from '@angular/router';
 import { environment } from 'src/environments/environment';
-import { POSTS, USERS, USERS as USERS2  } from '../../../server/db-data';
-import { first, last, take, tap } from 'rxjs/operators';
+import { USERS, USERS as USERS2  } from '../../../server/db-data';
+import { tap } from 'rxjs/operators';
 
 
 describe('UsersService', () => {
